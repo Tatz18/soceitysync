@@ -9,6 +9,8 @@ import '../screens/payment_screen.dart';
 import '../screens/complaint_screen.dart';
 import '../screens/community_screen.dart';
 import '../screens/services_screen.dart';
+import '../screens/group_chat_screen.dart';
+import '../screens/marketplace_screen.dart';
 import '../widgets/feature_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,7 +27,7 @@ class HomeScreen extends StatelessWidget {
         actions: [IconButton(icon: const Icon(Icons.person), onPressed: () {})],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(AppSizes.padding),
+        padding: const EdgeInsets.all(16.0),
         child: GridView.count(
           crossAxisCount: crossAxisCount,
           crossAxisSpacing: 12,
@@ -40,6 +42,8 @@ class HomeScreen extends StatelessWidget {
             FeatureCard(title: 'Complaints', icon: Icons.report, onTap: () => _navigate(context, const ComplaintScreen())),
             FeatureCard(title: 'Community', icon: Icons.group, onTap: () => _navigate(context, const CommunityScreen())),
             FeatureCard(title: 'Services', icon: Icons.build, onTap: () => _navigate(context, const ServicesScreen())),
+            FeatureCard(title: 'Group Chat', icon: Icons.chat, onTap: () => _navigate(context, const GroupChatScreen())), // New
+            FeatureCard(title: 'Marketplace', icon: Icons.store, onTap: () => _navigate(context, const MarketplaceScreen())), // New
           ],
         ),
       ),
